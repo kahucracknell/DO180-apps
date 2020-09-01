@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   res.send('Hello World from pod: ' + process.environment.HOSTNAME + '\n')
 });
 
-app.listen(8080, function () {
+app.listen(8080,process.environment.HOSTNAME,function () {
   console.log('Example app listening on port 8080!');
 });
 
